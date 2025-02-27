@@ -2,7 +2,7 @@
 
 ## 📖 Overview
 
-PocketMoney Bot is a sophisticated, AI-enhanced cryptocurrency trading bot specifically designed for Bitcoin markets on the Upbit exchange. Leveraging a combination of technical analysis, machine learning, and natural language processing, BitBot aims to make data-driven trading decisions while adapting to changing market conditions.
+PocketMoney Bot is a sophisticated, AI-enhanced cryptocurrency trading bot specifically designed for Bitcoin markets on the Upbit exchange. Leveraging a combination of technical analysis, machine learning, and natural language processing, it aims to make data-driven trading decisions while adapting to changing market conditions.
 
 ### 🌟 Key Features
 
