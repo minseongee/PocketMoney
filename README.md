@@ -97,7 +97,7 @@ To analyze performance:
 python analyze_performance.py --days 30
 ```
 
-## 🔍 Key Components
+## 🔍 Key Components (classified by function or section)
 
 ### Technical Analysis Module
 
@@ -128,86 +128,9 @@ The news module provides real-time market sentiment data:
 - Cache management for efficient operation
 
 ### Market Change Detection
-
 The market monitoring system detects significant changes in conditions:
 
 - Multi-factor change detection across different indicators
 - Stochastic RSI crossover detection with validation
-- KNN prediction direction chang드
-
-트레이딩 봇 시작:
-
-```bash
-python trading_bot.py
-```
-
-### 설정 옵션
-
-봇의 동작은 `__init__` 메서드에서 다음 매개변수를 수정하여 사용자 정의 가능:
-
-- `OVERSOLD_RSI`: 과매도 조건을 위한 RSI 임계값(기본값: 25)
-- `OVERBOUGHT_RSI`: 과매수 조건을 위한 RSI 임계값(기본값: 75)
-- `BOLLINGER_PERIOD`: 볼린저 밴드 계산을 위한 기간(기본값: 20)
-- `BOLLINGER_STD`: 볼린저 밴드를 위한 표준 편차 승수(기본값: 2.2)
-- `MOMENTUM_THRESHOLD`: 모멘텀 신호를 위한 임계값(기본값: 0.025)
-- `VOLATILITY_THRESHOLD`: 트레이딩 결정을 위한 변동성 임계값(기본값: 2)
-- `CONFIDENCE_THRESHOLD`: 거래 실행을 위한 최소 신뢰도 점수(기본값: 60)
-- `MIN_TRADE_INTERVAL`: 거래 간 최소 시간(기본값: 180초)
-- `COOLDOWN_HOURS`: 거래 후 대기 시간(기본값: 2시간)
-
-## 📈 성능 모니터링
-
-용돈 벌이 깡통은 모든 작업에 대한 자세한 로그를 SQLite 데이터베이스에 유지하여 포괄적인 성능 분석 가능:
-
-- **거래 로그**: 가격, 수량, 근거가 포함된 모든 실행 거래 기록
-- **GPT 자문 로그**: AI 트레이딩 권장 사항 기록
-- **뉴스 수집 로그**: 검색된 뉴스 데이터 보관
-- **API 사용량 추적**: API 호출 제한 모니터링
-
-성능 분석:
-
-```bash
-python analyze_performance.py --days 30
-```
-
-## 🔍 주요 구성 요소
-
-### 기술적 분석 모듈
-
-기술적 분석 엔진은 인기 있는 지표의 고급 버전을 구현:
-
-- TradingView 호환 계산이 포함된 RSI
-- 다섯 가지 다른 기간의 추세 감지를 위한 EMA 리본
-- 6단계 위치 분류가 있는 볼린저 밴드
-- 사용자 정의 가능한 스무딩이 있는 스토캐스틱 RSI
-- 맞춤형 모멘텀 지표
-
-### KNN 예측 엔진
-
-기계 학습 구성 요소는 수정된 K-최근접 이웃 알고리즘을 사용:
-
-- 암호화폐 시장에 맞춘 특징 공학
-- 시장 상황에 기반한 적응형 K값
-- 시간 감쇠가 있는 거리 가중 예측
-- 신호 품질 평가를 위한 신뢰도 점수 시스템
-
-### 뉴스 분석 통합
-
-뉴스 모듈은 실시간 시장 감성 데이터 제공:
-
-- 주요 암호화폐 뉴스 소스에서 예약된 수집
-- 관련 정보를 위한 키워드 기반 필터링
-- 여러 키 회전으로 API 사용량 최적화
-- 효율적인 작동을 위한 캐시 관리
-
-### 시장 변화 감지
-
-시장 모니터링 시스템은 중요한 조건 변화를 감지:
-
-- 다양한 지표에 걸친 다중 요인 변화 감지
-- 검증이 있는 스토캐스틱 RSI 크로스오버 감지
-- KNN 예측 방향 변화 모니터링
-- 변동성 기반 분석 빈도 조정
----
-
-*면책 조항: 이 소프트웨어는 교육 목적으로만 제공. 자신의 책임 하에 사용.*
+- KNN prediction direction change monitoring
+- Volatility-based analysis frequency adjustment
